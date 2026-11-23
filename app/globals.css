@@ -54,3 +54,20 @@
     }
   }
 }
+
+@keyframes trazo {
+  to { stroke-dashoffset: 0; }
+}
+
+.pulso {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: trazo 2.4s cubic-bezier(0.6, 0, 0.2, 1) 0.3s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulso {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
